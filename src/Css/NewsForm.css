@@ -1,0 +1,168 @@
+/* ===== NEWS FORM STYLES ===== */
+.news-form-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.form-title-magical {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.form-help {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-dashboard.primary {
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  border: 2px solid var(--neon-gold);
+  color: #ffd700;
+}
+
+.btn-dashboard.secondary {
+  background: transparent;
+  border: 2px solid #475569;
+  color: #cbd5e1;
+}
+
+.btn-dashboard.secondary:hover {
+  border-color: var(--neon-gold);
+  color: #ffd700;
+}
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.image-thumbnail-magical {
+  border: 2px solid #475569;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.image-thumbnail-magical:hover {
+  border-color: var(--neon-gold);
+  transform: translateY(-2px);
+}
+
+.image-thumbnail-magical.selected {
+  border-color: var(--neon-gold);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.image-thumbnail-magical img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.selected-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  color: #ffd700;
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Tips List */
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips-list li {
+  color: #cbd5e1;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #475569;
+  font-size: 0.9rem;
+}
+
+.tips-list li:last-child {
+  border-bottom: none;
+}
+
+/* Role Specific Styles */
+.role-editor {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.role-reporter {
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  color: #ffd700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.border-neon {
+  border-color: #475569 !important;
+}
+
+.dashboard-title {
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
+  border: 2px solid #dc2626 !important;
+  color: white !important;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #b91c1c, #991b1b) !important;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-title-magical {
+    font-size: 1.8rem;
+  }
+}

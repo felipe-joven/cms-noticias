@@ -1,0 +1,439 @@
+/* ===== VARIABLES NEON PERIODÍSTICO ===== */
+:root {
+  --neon-gold: #ffd700;
+  --neon-amber: #ffbf00;
+  --neon-silver: #c0c0c0;
+  --neon-bronze: #cd7f32;
+  --news-blue: #1e3a8a;
+  --news-dark: #0f172a;
+  --news-card: #1e293b;
+  --news-light: #334155;
+  --text-glow: 0 0 10px currentColor;
+  --accent-red: #dc2626;
+  --accent-green: #059669;
+}
+
+/* ===== ANIMACIONES MÁGICAS ===== */
+@keyframes neonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes goldGlow {
+  0%, 100% { 
+    box-shadow: 0 0 5px var(--neon-gold), 0 0 10px var(--neon-gold);
+    border-color: var(--neon-gold);
+  }
+  50% { 
+    box-shadow: 0 0 20px var(--neon-gold), 0 0 30px var(--neon-amber);
+    border-color: var(--neon-amber);
+  }
+}
+
+@keyframes textShine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ===== ESTILOS BASE PERIODÍSTICOS ===== */
+.magical-body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
+  color: #f1f5f9;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  overflow-x: hidden;
+}
+
+/* ===== HERO SECTION PERIODÍSTICO ===== */
+.magical-hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--neon-gold);
+  box-shadow: 0 10px 40px rgba(255, 215, 0, 0.2);
+}
+
+.magical-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(30, 58, 138, 0.1) 0%, transparent 50%);
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #ffd700, #ffed4e, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShine 4s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: #cbd5e1;
+  font-style: italic;
+  border-left: 3px solid var(--neon-gold);
+  padding-left: 1rem;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* ===== BOTÓN ADMIN PERIODÍSTICO ===== */
+.btn-admin-neon {
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  border: 2px solid var(--neon-gold);
+  border-radius: 8px;
+  color: #ffd700;
+  padding: 12px 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: 'Georgia', serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-admin-neon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.btn-admin-neon:hover::before {
+  left: 100%;
+}
+
+.btn-admin-neon:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 5px 25px rgba(255, 215, 0, 0.5),
+    0 0 30px rgba(30, 58, 138, 0.4);
+  color: #ffed4e;
+  text-decoration: none;
+}
+
+/* ===== ESTADO PERIODÍSTICO ===== */
+.magical-status {
+  background: rgba(30, 41, 59, 0.9);
+  border: 2px solid var(--neon-silver);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  animation: neonPulse 3s ease-in-out infinite;
+  position: relative;
+  font-family: 'Courier New', monospace;
+}
+
+.magical-status::before {
+  content: '📊';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+.status-glow {
+  color: var(--neon-gold);
+  text-shadow: 0 0 8px var(--neon-gold);
+  font-weight: 600;
+}
+
+/* ===== FILTROS PERIODÍSTICOS ===== */
+.magical-filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 12px;
+  border: 1px solid var(--news-light);
+}
+
+.filter-btn-neon {
+  background: transparent;
+  border: 2px solid #475569;
+  color: #cbd5e1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'Georgia', serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.filter-btn-neon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.filter-btn-neon:hover::before {
+  left: 100%;
+}
+
+.filter-btn-neon:hover, .filter-btn-neon.active {
+  background: var(--news-blue);
+  color: white;
+  border-color: var(--neon-gold);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.filter-btn-neon.active {
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  border-color: var(--neon-gold);
+  animation: neonPulse 2s infinite;
+}
+
+/* ===== GRID DE NOTICIAS PERIODÍSTICO ===== */
+.news-grid-magical {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.section-title-neon {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  color: var(--neon-gold);
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title-neon::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--neon-gold), transparent);
+}
+
+/* ===== LOADING PERIODÍSTICO ===== */
+.magical-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.newspaper-spinner {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--neon-gold);
+  border-right: 3px solid var(--neon-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+.loading-text {
+  color: var(--neon-silver);
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px rgba(192, 192, 192, 0.5);
+}
+
+/* ===== ERROR PERIODÍSTICO ===== */
+.error-neon {
+  background: rgba(220, 38, 38, 0.1);
+  border: 2px solid #dc2626;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+  font-family: 'Courier New', monospace;
+}
+
+.error-title {
+  color: #dc2626;
+  text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+  margin-bottom: 1rem;
+}
+
+/* ===== NO NEWS PERIODÍSTICO ===== */
+.no-news-neon {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(30, 41, 59, 0.9);
+  border: 2px solid var(--news-light);
+  border-radius: 12px;
+  margin: 2rem 0;
+  font-family: 'Georgia', serif;
+}
+
+.no-news-title {
+  color: var(--neon-gold);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.no-news-text {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* ===== FOOTER PERIODÍSTICO ===== */
+.magical-footer {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-top: 3px solid var(--neon-gold);
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+  box-shadow: 0 -5px 30px rgba(255, 215, 0, 0.1);
+  font-family: 'Georgia', serif;
+}
+
+.footer-title {
+  color: var(--neon-gold);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.footer-text {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.footer-stats {
+  color: var(--neon-silver);
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.5);
+  font-family: 'Courier New', monospace;
+}
+
+/* ===== EFECTOS ESPECIALES PERIODÍSTICOS ===== */
+.news-badge {
+  background: linear-gradient(135deg, var(--accent-red), #b91c1c);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+}
+
+.press-effect {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 215, 0, 0.05) 2px,
+    rgba(255, 215, 0, 0.05) 4px
+  );
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .news-grid-magical {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .magical-filters {
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .filter-btn-neon {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .section-title-neon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .magical-hero {
+    padding: 60px 0;
+  }
+  
+  .btn-admin-neon {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .magical-status {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Efecto de vintage newspaper al hover */
+.interactive-glow:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  filter: brightness(1.1);
+}

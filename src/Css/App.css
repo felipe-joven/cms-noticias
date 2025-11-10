@@ -1,0 +1,76 @@
+/* ===== VARIABLES MÁGICAS OSCURAS ===== */
+:root {
+  --dark-bg: #0f0519;
+  --darker-bg: #090113;
+  --magic-purple: #1a0b2e;
+  --neon-blue: #0ea5e9;
+  --neon-purple: #a855f7;
+  --neon-pink: #ec4899;
+  --magic-gold: #fbbf24;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --card-bg: rgba(26, 11, 46, 0.7);
+  --card-border: rgba(168, 85, 247, 0.3);
+}
+
+/* ===== ESTILOS GLOBALES MÁGICOS ===== */
+.magical-body {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-attachment: fixed;
+}
+
+/* Efectos de brillo mágico */
+.magical-glow {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.magical-glow-blue {
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+}
+
+/* Botones mágicos */
+.btn-magical {
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-magical::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-magical:hover::before {
+  left: 100%;
+}
+
+.btn-magical:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+}
+
+.btn-magical-secondary {
+  background: transparent;
+  border: 2px solid var(--neon-purple);
+  color: var(--neon-purple);
+}
+
+.btn-magical-secondary:hover {
+  background: var(--neon-purple);
+  color: white;
+}

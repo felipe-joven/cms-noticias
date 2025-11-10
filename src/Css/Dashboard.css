@@ -1,0 +1,188 @@
+/* ===== DASHBOARD NEON PERIODÍSTICO ===== */
+.magical-dashboard {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
+  color: #f1f5f9;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Sidebar periodístico */
+.magical-sidebar {
+  background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
+  border-right: 3px solid var(--neon-gold);
+  box-shadow: 5px 0 25px rgba(255, 215, 0, 0.2);
+  min-height: 100vh;
+}
+
+.sidebar-brand {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-family: 'Georgia', serif;
+  padding: 1.5rem;
+  border-bottom: 2px solid var(--neon-gold);
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.sidebar-item {
+  color: #cbd5e1;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  text-decoration: none;
+  display: block;
+  font-family: 'Georgia', serif;
+}
+
+.sidebar-item:hover {
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  border-left: 4px solid var(--neon-gold);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.sidebar-item.active {
+  background: rgba(30, 58, 138, 0.3);
+  color: #ffd700;
+  border-left: 4px solid var(--neon-gold);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Tarjetas del dashboard */
+.dashboard-card {
+  background: rgba(30, 41, 59, 0.9);
+  border: 2px solid #475569;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-card:hover {
+  border-color: var(--neon-gold);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.stats-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.stats-label {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  font-family: 'Georgia', serif;
+}
+
+/* Botones del dashboard */
+.btn-dashboard {
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  border: 2px solid var(--neon-gold);
+  color: #ffd700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Georgia', serif;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-dashboard:hover {
+  background: linear-gradient(135deg, #3730a3, #1e3a8a);
+  color: #ffed4e;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Tablas periodísticas */
+.magical-table {
+  background: rgba(30, 41, 59, 0.9);
+  border: 2px solid #475569;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.magical-table th {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  color: #ffd700;
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  border-bottom: 2px solid var(--neon-gold);
+  padding: 1rem;
+}
+
+.magical-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #475569;
+  color: #cbd5e1;
+  font-family: 'Georgia', serif;
+}
+
+.magical-table tr:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+/* Formularios del dashboard */
+.form-magical {
+  background: rgba(30, 41, 59, 0.9);
+  border: 2px solid #475569;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.form-magical label {
+  color: #ffd700;
+  font-weight: 600;
+  font-family: 'Georgia', serif;
+  margin-bottom: 0.5rem;
+}
+
+.form-magical input,
+.form-magical textarea,
+.form-magical select {
+  background: rgba(15, 23, 42, 0.8);
+  border: 2px solid #475569;
+  border-radius: 8px;
+  color: #f1f5f9;
+  padding: 0.75rem;
+  font-family: 'Georgia', serif;
+  transition: all 0.3s ease;
+}
+
+.form-magical input:focus,
+.form-magical textarea:focus,
+.form-magical select:focus {
+  border-color: var(--neon-gold);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .magical-sidebar {
+    min-height: auto;
+    border-right: none;
+    border-bottom: 3px solid var(--neon-gold);
+  }
+  
+  .stats-number {
+    font-size: 2rem;
+  }
+  
+  .dashboard-card {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,85 @@
+/* ===== HEADER NEON PERIODÍSTICO ===== */
+.magical-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  border-bottom: 3px solid var(--neon-gold);
+  box-shadow: 0 5px 25px rgba(255, 215, 0, 0.2);
+  padding: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.magical-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  animation: shimmer 3s infinite;
+}
+
+.header-brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  text-decoration: none;
+}
+
+.header-nav .nav-link {
+  color: #cbd5e1;
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.header-nav .nav-link:hover {
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.header-btn {
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  border: 2px solid var(--neon-gold);
+  color: #ffd700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Georgia', serif;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header-btn:hover {
+  background: linear-gradient(135deg, #3730a3, #1e3a8a);
+  color: #ffed4e;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-brand {
+    font-size: 1.5rem;
+  }
+  
+  .header-nav {
+    margin-top: 1rem;
+  }
+  
+  .header-nav .nav-link {
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+  }
+}
